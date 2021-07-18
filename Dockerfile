@@ -1,4 +1,5 @@
 FROM postgres:11.9
+ENV LANG C
 WORKDIR /docker-entrypoint-initdb.d
 COPY init-db.sh 1-init-db.sh
 COPY test-chars.sql 2-test-chars.sql
