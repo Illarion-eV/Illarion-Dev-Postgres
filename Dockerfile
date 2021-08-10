@@ -1,4 +1,4 @@
-FROM postgres:11.9
+FROM postgres:13.3
 ENV LANG C
 WORKDIR /docker-entrypoint-initdb.d
 COPY init-db.sh 1-init-db.sh
