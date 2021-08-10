@@ -1,5 +1,3 @@
-TRUNCATE "accounts"."account" CASCADE;
-
 INSERT INTO "accounts"."account" VALUES
 	(1, 'test', '$1$illarion$QPEdmswqVsgd4bDsj2ZeL/', 'test@dev.null', '2013-07-16 16:45:19.548574', '127.0.0.1' , 3, 5, 1, NULL, '0,1,2,3,4,5', '6,7,8', 'test', 100, 1, NULL, 0, 'metric', 'metric');
 
