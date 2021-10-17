@@ -1,10 +1,10 @@
 #!/bin/bash
 
-wget http://illarion.org/media/localserver/db_dumps.php?request=schema -O devserver_schema.dump --quiet
-wget http://illarion.org/media/localserver/db_dumps.php?request=content -O devserver_content.dump --quiet
-wget http://illarion.org/media/localserver/db_dumps.php?request=accounts_schema -O accounts_schema.dump --quiet
-wget http://illarion.org/media/localserver/db_dumps.php?request=accounts_content -O accounts_content.dump --quiet
-wget http://illarion.org/media/localserver/db_dumps.php?request=homepage_schema -O homepage_schema.dump --quiet
+wget --no-check-certificate http://illarion.org/media/localserver/db_dumps.php?request=schema -O devserver_schema.dump --quiet
+wget --no-check-certificate http://illarion.org/media/localserver/db_dumps.php?request=content -O devserver_content.dump --quiet
+wget --no-check-certificate http://illarion.org/media/localserver/db_dumps.php?request=accounts_schema -O accounts_schema.dump --quiet
+wget --no-check-certificate http://illarion.org/media/localserver/db_dumps.php?request=accounts_content -O accounts_content.dump --quiet
+wget --no-check-certificate http://illarion.org/media/localserver/db_dumps.php?request=homepage_schema -O homepage_schema.dump --quiet
 
 psql -v -d illarion -U illarion <<-EOSQL
     CREATE USER homepage;
